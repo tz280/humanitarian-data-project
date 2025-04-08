@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Soft Gradient Background -->
+  <defs>
+    <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4f6f9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e9f0f5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#backgroundGradient)" />
+  
+  <!-- Textual Elements -->
+  <text x="50%" y="40%" 
+        text-anchor="middle" 
+        font-family="Inter, Arial, sans-serif" 
+        font-size="120" 
+        font-weight="700" 
+        fill="rgba(41, 128, 185, 0.3)">
+    DATA FOR
+  </text>
+  
+  <text x="50%" y="55%" 
+        text-anchor="middle" 
+        font-family="Inter, Arial, sans-serif" 
+        font-size="150" 
+        font-weight="800" 
+        fill="rgba(41, 128, 185, 0.4)">
+    HUMANITY
+  </text>
+  
+  <text x="50%" y="85%" 
+        text-anchor="middle" 
+        font-family="Inter, Arial, sans-serif" 
+        font-size="50" 
+        font-weight="600" 
+        fill="rgba(192, 57, 43, 0.3)">
+    Protecting Those Who Help
+  </text>
+</svg>

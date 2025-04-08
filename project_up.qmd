@@ -3,8 +3,9 @@ title: "Aid Under Attack: Analyzing Security Threats to Humanitarian Operations"
 author: "DSAN student"
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: 
+      - cosmo
+      - styles.css
     toc: true
     toc-depth: 3
     code-fold: true

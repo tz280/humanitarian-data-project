@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Aid Under Attack"
+  page-navigation: true
+  
+navbar:
+  left:
+    - href: index.qmd
+      text: Home
+    - href: project_up.qmd
+      text: Analysis
+
+format:
+  html:
+    theme: 
+      - cosmo
+      - styles.css
+    css: styles.css
+    code-link: true

@@ -1,0 +1,11 @@
+---
+title: "DATA FOR HUMANITY"
+subtitle: "Protecting Those Who Help"
+page-layout: full
+format: 
+  html:
+    css: styles.css
+---
+## Welcome to my Research Project
+
+This data-driven analysis explores security threats facing humanitarian workers worldwide.
