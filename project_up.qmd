@@ -933,4 +933,15 @@ Our data-driven analysis of security incidents affecting humanitarian workers re
 
 By implementing these evidence-based recommendations, humanitarian organizations and policy makers can work toward reversing the alarming trends documented in this analysis. The data clearly shows where, when, and how humanitarian workers face the greatest dangers—now action must follow to ensure they can fulfill their vital mission with the protection they deserve.
 
+## References
+
+1. Security Incidents Dataset (1997-2024)
+   - Source: Provided course dataset
+   - Filename: `security_incidents.csv`
+   - Scope: Humanitarian worker security incidents
+   - Time Period: 1997-2024
+   - Content: Comprehensive record of incidents affecting humanitarian staff
+
+**Note:** This dataset was the primary source for all analyses in this research project. No additional external sources were consulted beyond the provided CSV file.
+
 > "The safety of those who bring aid to the world's most vulnerable is not merely an operational concern—it is a moral imperative. The data compels us to act."
