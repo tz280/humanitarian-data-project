@@ -16,7 +16,7 @@
         font-family="Inter, Arial, sans-serif" 
         font-size="120" 
         font-weight="700" 
-        fill="rgba(41, 128, 185, 0.3)">
+        fill="rgba(41, 128, 185, 0.4)">
     DATA FOR
   </text>
   
@@ -25,7 +25,7 @@
         font-family="Inter, Arial, sans-serif" 
         font-size="150" 
         font-weight="800" 
-        fill="rgba(41, 128, 185, 0.4)">
+        fill="rgba(41, 128, 185, 0.45)">
     HUMANITY
   </text>
   
@@ -34,7 +34,7 @@
         font-family="Inter, Arial, sans-serif" 
         font-size="50" 
         font-weight="600" 
-        fill="rgba(192, 57, 43, 0.3)">
+        fill="rgba(192, 57, 43, 0.4)">
     Protecting Those Who Help
   </text>
 </svg>

@@ -488,49 +488,57 @@ This evolution in tactics demands corresponding evolution in security protocols.
 ```{python}
 #| label: fig-staff-comparison
 #| fig-cap: "Comparison of Casualties Between National and International Staff"
-
 # Calculate total casualties for national and international staff
 nationals = df[['Nationals killed', 'Nationals wounded', 'Nationals kidnapped']].sum()
 nationals.index = ['Killed', 'Wounded', 'Kidnapped']
-
 internationals = df[['Internationals killed', 'Internationals wounded', 'Internationals kidnapped']].sum()
 internationals.index = ['Killed', 'Wounded', 'Kidnapped']
 
 # Combine into a dataframe for plotting
-staff_comparison = pd.DataFrame({'National Staff': nationals, 'International Staff': internationals})
+staff_comparison = pd.DataFrame({
+    'National Staff': nationals, 
+    'International Staff': internationals
+})
 
 # Create horizontal stacked bar chart
-fig, ax = plt.subplots(figsize=(8, 5))
+fig, ax = plt.subplots(figsize=(10, 6))
 
 # Plot the bars
-staff_comparison.plot(kind='barh', ax=ax, color=[main_palette[3], accent_palette[3]])
+bars = staff_comparison.plot(kind='barh', ax=ax, color=[main_palette[3], accent_palette[3]])
 
-# Add totals as annotations with contrasting colors for better visibility
 for i, row in enumerate(staff_comparison.index):
     nat_val = staff_comparison.loc[row, 'National Staff']
     int_val = staff_comparison.loc[row, 'International Staff']
     total = nat_val + int_val
     ratio = nat_val / total if total > 0 else 0
-    
-    # National staff numbers (inside blue bars)
-    ax.text(nat_val / 2, i, f"{int(nat_val)}", 
-            ha='center', va='center', color='white', fontweight='bold',
+
+    ax.text(nat_val * 0.6, i - 0.15, f"{int(nat_val)}",
+            ha='center', va='center',
+            color='white',
+            fontweight='bold',
+            fontsize=11,
             path_effects=[pe.withStroke(linewidth=3, foreground='black')])
-    
-    # International staff numbers (inside orange bars)
-    ax.text(nat_val + int_val / 2, i, f"{int(int_val)}", 
-            ha='center', va='center', color='white', fontweight='bold',
-            path_effects=[pe.withStroke(linewidth=3, foreground='black')])
-    
-    # Ratio text (outside bars)
-    ax.text(nat_val + int_val + 10, i, f"({ratio:.1%} national)", 
-            va='center', fontsize=10, color='black')
+
+    ax.text(total * 0.06, i + 0.15, f"{int(int_val)}",
+            ha='center', va='center',
+            color='black',
+            fontweight='bold',
+            fontsize=11)
+
+    ax.text(total + 20, i, f"({ratio:.1%} national)",
+            va='center',
+            fontsize=10,
+            color='black')
+
 
 # Style the plot
 ax = style_plot(ax, 'Casualties by Staff Type (1997-2024)', 'Number of Casualties', '')
-plt.legend(loc='upper right')
 
+# Adjust legend and layout
+plt.legend(loc='upper right')
 plt.tight_layout()
+
+# Show the plot
 plt.show()
 ```
 
