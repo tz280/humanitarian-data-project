@@ -1,0 +1,245 @@
+
+:root {
+    --primary-color: #4a89dc;
+    --secondary-color: #e57373; 
+    --light-blue: #b3d1ff; 
+    --neutral-color: #f5f7fa;
+    --text-color: #2c3e50; 
+    --accent-color: #f9a825; 
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Open Sans', sans-serif;
+  }
+  
+  body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-image: url('humanitarian-background.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* 添加半透明白色覆盖层以增强可读性 */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: -1;
+  }
+  
+  /* 顶部标题样式 */
+  .quarto-title-block .quarto-title {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  h1.title {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-align: center;
+    font-weight: 400;
+    margin-top: 0;
+    opacity: 0.8;
+  }
+  
+  /* 文章结构 */
+  .quarto-title-meta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* 引用块样式 */
+  blockquote {
+    border-left: 4px solid var(--primary-color);
+    background-color: rgba(179, 209, 255, 0.2);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 4px 4px 0;
+    font-style: italic;
+  }
+  
+  blockquote p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+  }
+  
+  /* 章节标题 */
+  h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--light-blue);
+  }
+  
+  h3 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* 可视化图表样式 */
+  .cell-output-display {
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    overflow: hidden;
+  }
+  
+  .quarto-figure {
+    text-align: center;
+  }
+  
+  .quarto-figure-caption {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #666;
+    margin-top: 0.75rem;
+  }
+  
+  /* 列表样式 */
+  ol, ul {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.75rem;
+  }
+  
+  /* 强调样式 */
+  strong {
+    color: var(--primary-color);
+    font-weight: 700;
+  }
+  
+  /* 代码折叠按钮 */
+  .code-fold-btn {
+    background-color: var(--neutral-color);
+    border: 1px solid #ddd;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+  }
+  
+  .code-fold-btn:hover {
+    background-color: var(--light-blue);
+  }
+  
+  /* 移动响应式调整 */
+  @media (max-width: 768px) {
+    h1.title {
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.5rem;
+    }
+    
+    h2 {
+      font-size: 1.75rem;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+    }
+    
+    .cell-output-display {
+      padding: 0.5rem;
+      margin: 1.5rem auto;
+    }
+  }
+  
+  /* 内容容器样式 */
+  .page-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 2rem;
+  }
+  
+  .column-page-left {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 1000px) {
+    .page-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 数据强调区块 */
+  .data-highlight {
+    background-color: rgba(74, 137, 220, 0.1);
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* 导航栏样式 */
+  .nav-link {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
+  
+  .nav-link:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* 表格样式 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.75rem 1rem;
+  }
+  
+  td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(179, 209, 255, 0.1);
+  }
+  
+  tr:hover {
+    background-color: rgba(179, 209, 255, 0.2);
+  }
