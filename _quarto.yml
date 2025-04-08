@@ -6,12 +6,12 @@ website:
   title: "Aid Under Attack"
   page-navigation: true
   
-navbar:
-  left:
-    - href: index.qmd
-      text: Home
-    - href: project_up.qmd
-      text: Analysis
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: project_up.qmd
+        text: Analysis
 
 format:
   html:
